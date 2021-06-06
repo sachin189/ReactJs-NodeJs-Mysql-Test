@@ -1,0 +1,10 @@
+.details-body{
+    color: #fff;
+}
+.poster{
+    border-radius: 16px ;
+    object-fit: cover;
+}
+.mb-0{
+    color: #fff;
+}

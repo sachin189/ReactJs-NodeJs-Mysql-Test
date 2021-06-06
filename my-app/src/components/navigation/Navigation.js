@@ -1,12 +1,14 @@
+import { Link, NavLink } from 'react-router-dom'
+import './navigation.css'
 const Navigation = ()=>{
     return (
-            <nav class="navbar navbar-dark bg-primary">
+            <nav className="navbar">
                 <ul className="nav justify-content-center">
                     <li className="nav-item">
-                        <a className="nav-link" aria-current="page" href="#">Active</a>
+                        <NavLink className="nav-link" to="/" activeClassName="btn btn-primary">Movies</NavLink>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" aria-current="page" href="#">Active</a>
+                        <NavLink className="nav-link" to="/genres" activeClassName="btn btn-primary">Genres</NavLink>
                     </li>
                 </ul>
             </nav>
