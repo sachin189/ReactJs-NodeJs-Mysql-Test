@@ -26,8 +26,7 @@ class MovieModel {
                     group by mgd.fk_movie_id ) as a ON a.fk_movie_id = mv.id
                     LEFT JOIN (  select mcd.fk_movie_id, group_concat(c.name) actors from tbl_movie_casting_details mcd  
                     LEFT JOIN tbl_casting c ON c.id = mcd.fk_casting_id group by mcd.fk_movie_id ) b ON b.fk_movie_id = mv.id
-                    where status = 1 AND is_deleted = 0 AND (mv.id = ${params.id} OR ${params.id}=${params.id} ) group by mv.id`;
-        
+                    where status = 1 AND is_deleted = 0 AND (mv.id = ${params.id} ) group by mv.id`;
         const result = await query(sql);
 
         // return back the first row (user)

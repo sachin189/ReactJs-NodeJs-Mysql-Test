@@ -13,6 +13,7 @@ class MenuController {
     getMoviesByID = async (req, res, next) => {
         console.log(req)  
         let movie = await MovieModel.findOne({ id: req.params.id });
+        
         if (!movie) {
             throw new HttpException(404, 'User not found');
         }

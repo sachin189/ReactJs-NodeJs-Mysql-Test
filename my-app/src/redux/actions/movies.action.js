@@ -12,13 +12,14 @@ const getAllMovies =  () => async dispatch => {
     function success(movies) { return { type: moviesConstent.GET_ALL_MOVIES, movies } }
 }
 
-const getMovieDetails =  (movieId) => async dispatch => { 
-    
+const getMovieDetails =  (movieId) => async dispatch => {     
+    dispatch(remove({}))
     const response = await api.get(`${API_URL}/v1/movies/id/${movieId}`).catch(err=>{ console.log(response) })
     if(response.status == 200)
     {
         dispatch(success(response.data))
     }
+    function remove() { return { type: moviesConstent.REMOVE_MOVIE_DETAILS} }
     function success(movie) { return { type: moviesConstent.MOVIE_DETAILS, movie } }
 }
 
@@ -26,4 +27,3 @@ export const moviesActions = {
     getAllMovies,
     getMovieDetails
 }
-

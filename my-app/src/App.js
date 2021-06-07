@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Header } from './components'
 
 const Movies = 	React.lazy(() => import('./pages/movies/movies'));
+const Genres = 	React.lazy(() => import('./pages/movies/genres'));
 const MovieDetails = 	React.lazy(() => import('./pages/movies/movie.details'));
 
 const loading = (
@@ -42,6 +43,7 @@ function App() {
 						<Switch>
 							<Route exact path="/" name="All Movies" render={props => <Movies {...props}/>} />
 							<Route exact path="/movie/:movieId" name="Movie Details" render={props => <MovieDetails {...props}/>} />
+							<Route exact path="/genres" name="All Movies" render={props => <Genres {...props}/>} />
 						</Switch>
 					</React.Suspense>	
 				</div>

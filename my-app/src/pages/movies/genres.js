@@ -6,7 +6,7 @@ import './movies.css';
 
 import { moviesActions } from '../../redux/actions/movies.action'
 
-const Movies = (props) =>{
+const Genres = (props) =>{
 
     const moviesList  = useSelector( state => state.movies.moviesList);
     const dispatch = useDispatch();
@@ -29,7 +29,7 @@ const Movies = (props) =>{
                     </div>
                 </div>
             )
-    })
+        })
 
     
     return ( 
@@ -41,4 +41,4 @@ const Movies = (props) =>{
     )
 }
 
-export default Movies;
+export default Genres;

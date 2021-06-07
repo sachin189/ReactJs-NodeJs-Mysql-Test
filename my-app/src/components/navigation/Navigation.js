@@ -7,9 +7,6 @@ const Navigation = ()=>{
                     <li className="nav-item">
                         <NavLink className="nav-link" to="/" activeClassName="btn btn-primary">Movies</NavLink>
                     </li>
-                    <li className="nav-item">
-                        <NavLink className="nav-link" to="/genres" activeClassName="btn btn-primary">Genres</NavLink>
-                    </li>
                 </ul>
             </nav>
         )
